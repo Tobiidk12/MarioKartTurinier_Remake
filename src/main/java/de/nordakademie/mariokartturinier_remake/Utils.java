@@ -8,7 +8,7 @@ public class Utils {
 
     public static <T> int getFreeIndex(HashMap<Integer, T> hash){
         int outoutInt = -1;
-        for (Integer i : hash.keySet()){
+        for (int i = 0; i < hash.size(); i++){
             if (hash.get(i) == null){
                 outoutInt = i;
             }
