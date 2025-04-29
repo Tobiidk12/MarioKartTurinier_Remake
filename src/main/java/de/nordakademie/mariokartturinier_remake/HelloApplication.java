@@ -18,18 +18,19 @@ public class HelloApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         //stage.show();
-       Game game = new Game();
-       game.addPlayer("Mario");
-       game.addPlayer("Alice");
-        game.removePlayer("Mario");
-        game.addPlayer("Bob");
-        game.addPlayer("Carol");
-        game.spielerListe.get(1).setPoints(10);
-        game.spielerListe.get(0).setPoints(5);
-        //game.spielerListe.get(1).setActive(false);
-        game.givePlaces();
+        Game spiel = new Game(1,4);
+        SpielerListe gamePlayers = spiel.GlobalspielerListe;
+        gamePlayers.addPlayer("Mario");
+        gamePlayers.addPlayer("Alice");
+        gamePlayers.removePlayer("Mario");
+        gamePlayers.addPlayer("Bob");
+        gamePlayers.addPlayer("Carol");
+        gamePlayers.spielerListe.get(1).increasePoints(10);
+        gamePlayers.spielerListe.get(0).increasePoints(5);
+        //gamePlayers.spielerListe.get(1).setActive(false);
+        gamePlayers.setPlaces();
 
-        for( Player p : game.spielerListe.values() ) {
+        for( Player p : gamePlayers.spielerListe.values() ) {
             p.tostring();
         }
 

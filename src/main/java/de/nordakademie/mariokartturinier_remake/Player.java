@@ -33,13 +33,23 @@ public class Player {
     }
 
     /**
-     * Sets points.
+     * Increase points.
      *
      * @param points the points
      */
-    public void setPoints(int points) {
-        this.points = points;
+    public void increasePoints(int points) {
+        this.points = this.points + points;
+}
+
+    /**
+     * Decrease points.
+     *
+     * @param points the points
+     */
+    public void decreasePoints(int points) {
+        this.points = this.points - points;
     }
+
 
     /**
      * Gets place.
