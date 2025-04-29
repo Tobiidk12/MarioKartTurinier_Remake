@@ -10,6 +10,7 @@ module de.nordakademie.mariokartturinier_remake {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires annotations;
 
     opens de.nordakademie.mariokartturinier_remake to javafx.fxml;
     exports de.nordakademie.mariokartturinier_remake;

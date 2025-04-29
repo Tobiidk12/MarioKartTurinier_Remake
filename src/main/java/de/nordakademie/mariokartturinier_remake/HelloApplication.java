@@ -7,6 +7,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * The type Hello application.
+ */
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -20,9 +23,25 @@ public class HelloApplication extends Application {
        game.addPlayer("Alice");
         game.removePlayer("Mario");
         game.addPlayer("Bob");
+        game.addPlayer("Carol");
+        game.spielerListe.get(1).setPoints(10);
+        game.spielerListe.get(0).setPoints(5);
+        //game.spielerListe.get(1).setActive(false);
+        game.givePlaces();
+
+        for( Player p : game.spielerListe.values() ) {
+            p.tostring();
+        }
+
+
 
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         launch();
     }
