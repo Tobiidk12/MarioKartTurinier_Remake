@@ -10,6 +10,11 @@ public class Player {
     private int points;
     private int place;
     private boolean active;
+    private int round;
+
+    public int getRound() {
+        return round;
+    }
 
     /**
      * Instantiates a new Player.
@@ -21,6 +26,13 @@ public class Player {
     this.points = 0;
     this.place = 1;
     this.active = true;
+    this.round = 1;
+}
+public void nextRound() {
+        this.round++;
+}
+public void repeatRound() {
+        this.round--;
 }
 
     /**
@@ -84,7 +96,7 @@ public class Player {
      * Sets active.
      */
     public void setActive() {
-        this.active = active;
+        this.active = true;
     }
 
     /**
@@ -115,8 +127,9 @@ public class Player {
     /**
      * Tostring.
      */
-    public void tostring() {
-    System.out.println("Player: " + name + " | points: " + points + " | place: " + place + " | active: " + active);
+    @Override
+    public String toString() {
+    return ("Player: " + name + " | points: " + points + " | place: " + place + " | active: " + active + " | round: " + round);
     }
 
 }

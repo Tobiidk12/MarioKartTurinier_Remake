@@ -18,24 +18,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         //stage.show();
-        Game spiel = new Game(1,4);
-        SpielerListe gamePlayers = spiel.GlobalspielerListe;
-        gamePlayers.addPlayer("Mario");
-        gamePlayers.addPlayer("Alice");
-        gamePlayers.removePlayer("Mario");
-        gamePlayers.addPlayer("Bob");
-        gamePlayers.addPlayer("Carol");
-        gamePlayers.spielerListe.get(1).increasePoints(10);
-        gamePlayers.spielerListe.get(0).increasePoints(5);
-        //gamePlayers.spielerListe.get(1).setActive(false);
-        gamePlayers.setPlaces();
-
-        for( Player p : gamePlayers.spielerListe.values() ) {
-            p.tostring();
-        }
-
-
-
+        Mockdata.mockdata();
     }
 
     /**

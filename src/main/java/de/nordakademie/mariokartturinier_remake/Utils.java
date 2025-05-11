@@ -1,5 +1,7 @@
 package de.nordakademie.mariokartturinier_remake;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 
 /**
@@ -29,4 +31,21 @@ public class Utils {
         return outoutInt;
 
     }
+
+    public static ArrayList<Player> getPointSorted(HashMap<Integer, Player> hash){
+
+        ArrayList<Player> sortedSpielerListe = new ArrayList<>(hash.values());
+
+        sortedSpielerListe.sort(new Comparator<Player>() {
+            @Override
+            public int compare(Player p1, Player p2) {
+                return Integer.compare(p2.getPoints(), p1.getPoints());
+            }
+        });
+        return sortedSpielerListe;
+
+    }
+
+
+
 }

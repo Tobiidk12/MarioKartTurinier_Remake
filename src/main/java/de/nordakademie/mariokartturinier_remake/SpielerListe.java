@@ -16,6 +16,12 @@ public class SpielerListe {
      */
     public String name;
 
+
+
+    public void clear(){
+        spielerListe.clear();
+    }
+
     /**
      * Get player collection.
      *
@@ -25,6 +31,12 @@ public class SpielerListe {
         return spielerListe.values();
     }
 
+
+    public void nextRound(){
+        for(Player p : getPlayer()){
+            p.nextRound();
+        }
+    }
 
     /**
      * Gets name.
@@ -99,6 +111,7 @@ public class SpielerListe {
 
     }
 
+
     /**
      * Enable player.
      *
@@ -114,43 +127,35 @@ public class SpielerListe {
         }
     }
 
-    /**
-     * Sets places.
-     */
+
+
     public void setPlaces() {
-        List<Map.Entry<Integer, Player>> eintraege = new ArrayList<>(spielerListe.entrySet());
+        ArrayList<Player> playerList= Utils.getPointSorted(spielerListe);
 
-        eintraege.sort(new Comparator<Map.Entry<Integer, Player>>() {
-            @Override
-            public int compare(Map.Entry<Integer, Player> e1, Map.Entry<Integer, Player> e2) {
-                Player spieler1 = e1.getValue();
-                Player spieler2 = e2.getValue();
-
-                int punkte1 = spieler1.getPoints();
-                int punkte2 = spieler2.getPoints();
-
-                return Integer.compare(punkte2, punkte1);
-            }
-        });
-        // 3. Schritt: Platzierungen setzen
         int aktuellePlatzierung = 0;
         int letztePunkte = -1;
 
-        for (int i = 0; i < eintraege.size(); i++) {
-            Player spieler = eintraege.get(i).getValue();
+        for (int i = 0; i < playerList.size(); i++) {
+            Player spieler = playerList.get(i);
+
             if (!spieler.isActive()) {
-                spieler.setPlace(eintraege.size());
+                spieler.setPlace(playerList.size());
                 continue;
             }
 
             if (spieler.getPoints() != letztePunkte) {
                 aktuellePlatzierung++;
             }
+
             spieler.setPlace(aktuellePlatzierung);
             letztePunkte = spieler.getPoints();
         }
 
-    }
 
+    }
+    public ArrayList<Player> getSortedArray() {
+        ArrayList<Player> sortedSpielerListe = Utils.getPointSorted(spielerListe);
+        return sortedSpielerListe;
+    }
 
 }
