@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane
+xmlns:fx="http://javafx.com/fxml">
+        xmlns="http://javafx.com/javafx"
+        fx:controller="de.nordakademie.mariokartturinier_remake.controller.OverviewController">
+
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="New" />
+                <MenuItem text="Open" />
+                <MenuItem text="Save" />
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="column1" text="Spalte 1" />
+                <TableColumn fx:id="column2" text="Spalte 2" />
+                <TableColumn fx:id="column3" text="Spalte 3" />
+            </columns>
+        </TableView>
+    </center>
+
+
+
+
+</BorderPane>
+

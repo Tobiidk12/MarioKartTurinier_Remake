@@ -14,4 +14,8 @@ module de.nordakademie.mariokartturinier_remake {
 
     opens de.nordakademie.mariokartturinier_remake to javafx.fxml;
     exports de.nordakademie.mariokartturinier_remake;
+    exports de.nordakademie.mariokartturinier_remake.controller;
+    opens de.nordakademie.mariokartturinier_remake.controller to javafx.fxml;
+    exports de.nordakademie.mariokartturinier_remake.util;
+    opens de.nordakademie.mariokartturinier_remake.util to javafx.fxml;
 }

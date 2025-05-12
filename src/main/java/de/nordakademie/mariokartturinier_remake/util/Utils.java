@@ -1,4 +1,6 @@
-package de.nordakademie.mariokartturinier_remake;
+package de.nordakademie.mariokartturinier_remake.util;
+
+import de.nordakademie.mariokartturinier_remake.Player;
 
 import java.util.ArrayList;
 import java.util.Comparator;
