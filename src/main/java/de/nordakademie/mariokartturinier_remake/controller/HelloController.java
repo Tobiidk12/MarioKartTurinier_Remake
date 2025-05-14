@@ -26,14 +26,10 @@ public class HelloController {
      */
     @FXML
     protected void onHelloButtonClick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("Overview.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("/de/nordakademie/mariokartturinier_remake/Overview.fxml"));
         Scene scene ;
-        try {
             scene = new Scene(fxmlLoader.load(), 1000, 750);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return; // Exit the method if loading fails
-        }
+
         Stage currentStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         currentStage.setScene(scene);
 

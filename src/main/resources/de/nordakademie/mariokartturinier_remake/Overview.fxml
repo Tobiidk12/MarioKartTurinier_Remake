@@ -7,20 +7,19 @@
 <?import javafx.scene.layout.*?>
 
 
+
+<BorderPane
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="de.nordakademie.mariokartturinier_remake.controller.Overview">
+<!--
+todo anschauen warum Falsch
 <BorderPane
 xmlns:fx="http://javafx.com/fxml">
         xmlns="http://javafx.com/javafx"
         fx:controller="de.nordakademie.mariokartturinier_remake.controller.OverviewController">
+-->
 
-    <top>
-        <MenuBar>
-            <Menu text="File">
-                <MenuItem text="New" />
-                <MenuItem text="Open" />
-                <MenuItem text="Save" />
-            </Menu>
-        </MenuBar>
-    </top>
 
     <center>
         <TableView fx:id="tableView">
