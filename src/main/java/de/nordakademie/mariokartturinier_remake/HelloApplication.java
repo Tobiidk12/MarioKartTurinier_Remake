@@ -19,10 +19,9 @@ public class HelloApplication extends Application {
         stage.setTitle("Meine JavaFX App");
         stage.setScene(new Scene(root, 400, 300));
         stage.show();
-
         */
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("HelloView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1000, 750);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/de/nordakademie/mariokartturinier_remake/HelloView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 400, 250);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

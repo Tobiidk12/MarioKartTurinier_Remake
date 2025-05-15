@@ -11,7 +11,7 @@
 <BorderPane
         xmlns="http://javafx.com/javafx"
         xmlns:fx="http://javafx.com/fxml"
-        fx:controller="de.nordakademie.mariokartturinier_remake.controller.Overview">
+        fx:controller="de.nordakademie.mariokartturinier_remake.controller.OverviewController">
 <!--
 todo anschauen warum Falsch
 <BorderPane
