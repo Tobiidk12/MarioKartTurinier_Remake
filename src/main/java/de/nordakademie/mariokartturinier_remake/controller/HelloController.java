@@ -34,8 +34,16 @@ public class HelloController {
         currentStage.setScene(scene);
 
 
-
-
         label.setText("Welcome to JavaFX Application!");
+    }
+
+    @FXML
+    protected void onPlayerButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("/de/nordakademie/mariokartturinier_remake/PlayerOverview.fxml"));
+        Scene scene ;
+        scene = new Scene(fxmlLoader.load(), 1000, 750);
+
+        Stage currentStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        currentStage.setScene(scene);
     }
 }

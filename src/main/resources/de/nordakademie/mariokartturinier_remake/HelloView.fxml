@@ -13,22 +13,9 @@
     <children>
 
          <Button text="Klick mich!" onAction="#onHelloButtonClick" layoutX="100" layoutY="80"/>
+        <Button text="PlayerOverview" onAction="#onPlayerButtonClick" layoutX="100" layoutY="80"/>
         <Label fx:id="label" layoutX="100" layoutY="120" text="Hello there"/>
-        <!--
-                <TableView fx:id="tableView" >
-                    <columns>
-                        <TableColumn fx:id="column1" text="Spalte 1" />
-                        <TableColumn fx:id="column2" text="Spalte 2" />
-                        <TableColumn fx:id="column3" text="Spalte 3" />
-                        <TableColumn fx:id="column4" text="Spalte 4" />
-                    </columns>
-                        <columnResizePolicy>
-                            <TableView fx:constant="UNCONSTRAINED_RESIZE_POLICY"/>
-                        </columnResizePolicy>
 
-
-                </TableView>
-        -->
 
 
     </children>
